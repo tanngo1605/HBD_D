@@ -24,6 +24,7 @@
         background-image: -moz-radial-gradient(#374566, #010203);
         background-image: -o-radial-gradient(#374566, #010203);
         background-image: radial-gradient(#374566, #010203);
+        z-index: -10;
       }
       span {
         text-transform: uppercase;
@@ -367,10 +368,6 @@
       </div>
 
       <h1 style="font-size: 95px"><i>Ella Nguyen</i></h1>
-      <audio loop autoplay>
-        <source src="happy-birthday-sound.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
     </div>
     <script></script>
     <script>
@@ -378,5 +375,9 @@
         window.parent.postMessage("resize", "*");
       }
     </script>
+    <audio loop autoplay controls style="visibility: hidden">
+      <source src="happy-birthday-sound.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
   </body>
 </html>
