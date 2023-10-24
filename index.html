@@ -381,8 +381,15 @@
       Your browser does not support the audio element.
     </audio>
     <script>
+      var isPlaying = false;
       document.addEventListener("keypress", (e) => {
         console.log({ e });
+        if (isPlaying) {
+          isPlaying = false;
+          document.getElementById("song").pause();
+          return;
+        }
+        isPlaying = true;
         document.getElementById("song").play();
       });
     </script>
